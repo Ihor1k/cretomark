@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cretomark</title>
+    <link rel="stylesheet" href="./src/scss/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="menu-overlay"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo">
+            <a href="/"
+              ><img
+                src="./src/images/logo.png"
+                width="52"
+                height="52"
+                alt="Logo"
+            /></a>
+          </div>
+          <div class="header-logo-mobile">
+            <a href="/"
+              ><img
+                src="./src/images/logo.png"
+                width="24"
+                height="24"
+                alt="Logo"
+            /></a>
+          </div>
+
+          <div class="burger">
+            <img src="./src/images/burger.svg" alt="" />
+          </div>
+
+          <div class="header-menu">
+            <div class="burger-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  fill="#5C5A5B"
+                />
+              </svg>
+            </div>
+            <a href="#home" class="header-link">Home</a>
+            <a href="#about" class="header-link">About</a>
+            <a href="#services" class="header-link">Services</a>
+            <a href="#faq" class="header-link" style="font-family: Inter;">Faq</a>
+            <a href="#contact" class="header-link">Contact</a>
+          </div>
+
+          <div class="header-buttons mobile-visible">
+            <button class="header-button"><span>Contact Us</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                <g clip-path="url(#clip0_52_915)">
+                  <path d="M14.9824 8.49219L19.4902 13L14.9824 17.5078" stroke="#4FDB5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6.73926 13H19.4892" stroke="#4FDB5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_52_915">
+                    <rect width="17" height="17" fill="white" transform="translate(0.958008 13) rotate(-45)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="popup-overlay" id="popup">
+      <div class="popup">
+        <img src="./src/images/popup-bg.png" alt="" class="popup-bg-up">
+        <img src="./src/images/popup-bg1.png" alt="" class="popup-bg-down">
+        <div class="popup-inner">
+          <div class="popup-context">
+            <h3>Let’s Talk About Your IT Needs </h3>
+            <p>
+              Whether you need software solutions, IT consulting, or cybersecurity services, CRETOMARK is here to help. Contact us today to discuss your technology requirements and explore customized IT solutions designed for your business.
+            </p>
+          </div>
+
+          <form class="popup-form" id="joinForm">
+            <input type="text" id="name" placeholder="Full Name" required />
+
+            <input type="email" id="email" placeholder="E-mail" required />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              required
+            ></textarea>
+            <div class="popup-wrapper">
+              <button type="popup" class="popup-btn button">Send A Message
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <g clip-path="url(#clip0_52_1078)">
+                    <path d="M15.0039 8.49219L19.5117 13L15.0039 17.5078" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.76074 13H19.5107" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_52_1078">
+                      <rect width="17" height="17" fill="white" transform="translate(0.979492 13) rotate(-45)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <span class="close-popup">&times;</span>
+      </div>
+    </div>
+
+    <section id="home" class="hero">
+      <img src="./src/images/hero-bg.png" alt="" class="hero-img">
+      <img src="./src/images/hero-bg-mobile.png" alt="" class="hero-img-mobile">
+      <div class="container">
+        <div class="content">
+          <h1 class="hero-title"><span class="green">Smart IT and Software Solutions</span> for Seamless Business Operations</h1>
+          <p class="hero-text">Technology should drive efficiency, not create complexity. CRETOMARK provides expert IT services and licensed software solutions to help businesses enhance operations, improve security, and stay competitive 
+            in a digital-first world.</p>
+          <button class="button mb-btn">Get in touch 
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+              <g clip-path="url(#clip0_52_921)">
+                <path d="M14.5039 8.49219L19.0117 13L14.5039 17.5078" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.26074 13H19.0107" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_52_921">
+                  <rect width="17" height="17" fill="white" transform="translate(0.479492 13) rotate(-45)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="wedo">
+      <div class="container">
+        <div class="content">
+          <h2 class="title">What We Do</h2>
+          <p class="text">Comprehensive IT services and licensed software tailored to your business needs</p>
+        </div>
+        <div class="wedo-list">
+          <div class="wedo-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <path d="M20.0002 12C20.0002 8.31808 22.9849 5.33331 26.6668 5.33331C30.3487 5.33331 33.3335 8.31808 33.3335 12V16H36.0002C39.7277 16 41.5915 16 43.0616 16.6089C45.0219 17.4209 46.5792 18.9783 47.3912 20.9385C48.0002 22.4087 48.0002 24.2724 48.0002 28H52.0002C55.6821 28 58.6668 30.9847 58.6668 34.6666C58.6668 38.3485 55.6821 41.3333 52.0002 41.3333H48.0002V45.8666C48.0002 50.3471 48.0002 52.5873 47.1282 54.2986C46.3612 55.8039 45.1374 57.0277 43.6321 57.7947C41.9208 58.6666 39.6806 58.6666 35.2002 58.6666H33.3335V54C33.3335 50.6863 30.6472 48 27.3335 48C24.0198 48 21.3335 50.6863 21.3335 54V58.6666H18.1335C13.6531 58.6666 11.4129 58.6666 9.70157 57.7947C8.19628 57.0277 6.97243 55.8039 6.20544 54.2986C5.3335 52.5873 5.3335 50.3471 5.3335 45.8666V41.3333H9.3335C13.0154 41.3333 16.0002 38.3485 16.0002 34.6666C16.0002 30.9847 13.0154 28 9.3335 28H5.3335C5.3335 24.2724 5.3335 22.4087 5.94246 20.9385C6.75441 18.9783 8.3118 17.4209 10.272 16.6089C11.7422 16 13.606 16 17.3335 16H20.0002V12Z" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="wedo-text">Software Integration – Streamline business processes with custom API development and automation solutions that improve efficiency and connectivity</p>
+          </div>
+          <div class="wedo-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <path d="M26.6663 47.0895V53.3333C26.6663 56.2788 29.0542 58.6666 31.9997 58.6666C34.9452 58.6666 37.333 56.2788 37.333 53.3333V47.0895M31.9997 5.33331V7.99998M7.99967 32H5.33301M14.6663 14.6666L13.0661 13.0664M49.333 14.6666L50.9337 13.0664M58.6663 32H55.9997M47.9997 32C47.9997 40.8365 40.8362 48 31.9997 48C23.1631 48 15.9997 40.8365 15.9997 32C15.9997 23.1634 23.1631 16 31.9997 16C40.8362 16 47.9997 23.1634 47.9997 32Z" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="wedo-text">Software Reselling & IT Consulting – 
+              Get expert software selection, licensing, and implementation guidance tailored to your needs</p>
+          </div>
+          <div class="wedo-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <path d="M7.99967 42.6667V19.2C7.99967 16.2131 7.99967 14.7196 8.58097 13.5787C9.0923 12.5752 9.90819 11.7593 10.9117 11.248C12.0526 10.6667 13.5461 10.6667 16.533 10.6667H47.4663C50.4533 10.6667 51.9468 10.6667 53.0876 11.248C54.0912 11.7593 54.9071 12.5752 55.4184 13.5787C55.9997 14.7196 55.9997 16.2131 55.9997 19.2V42.6667H41.767C41.1147 42.6667 40.7886 42.6667 40.4817 42.7404C40.2096 42.8057 39.9495 42.9134 39.7109 43.0596C39.4418 43.2246 39.2112 43.4552 38.75 43.9164L38.5827 44.0837C38.1215 44.5449 37.8909 44.7755 37.6218 44.9404C37.3832 45.0866 37.1231 45.1943 36.851 45.2597C36.5441 45.3334 36.2179 45.3334 35.5657 45.3334H28.4337C27.7814 45.3334 27.4553 45.3334 27.1484 45.2597C26.8763 45.1943 26.6162 45.0866 26.3776 44.9404C26.1085 44.7755 25.8779 44.5449 25.4167 44.0837L25.2494 43.9164C24.7881 43.4552 24.5575 43.2246 24.2884 43.0596C24.0498 42.9134 23.7897 42.8057 23.5176 42.7404C23.2107 42.6667 22.8846 42.6667 22.2324 42.6667H7.99967ZM7.99967 42.6667C6.52692 42.6667 5.33301 43.8606 5.33301 45.3334V46.2222C5.33301 47.8755 5.33301 48.7022 5.51474 49.3804C6.00789 51.2209 7.44548 52.6585 9.28597 53.1516C9.96419 53.3334 10.7908 53.3334 12.4441 53.3334H51.5552C53.2085 53.3334 54.0352 53.3334 54.7134 53.1516C56.5539 52.6585 57.9915 51.2209 58.4846 49.3804C58.6663 48.7022 58.6663 47.8755 58.6663 46.2222C58.6663 45.3956 58.6663 44.9823 58.5755 44.6432C58.3289 43.7229 57.6101 43.0041 56.6899 42.7575C56.3508 42.6667 55.9374 42.6667 55.1108 42.6667H53.333" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p class="wedo-text">IT Services – Ensure stable, secure, and optimized IT infrastructure with cybersecurity, infrastructure management, and data protection solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <img src="./src/images/Ellipse 2.png" alt="" class="ellipse">
+      <div class="container">
+        <div class="content">
+          <h2 class="title">About Us</h2>
+          <p class="text">Your partner in technology, security, and efficiency</p>
+        </div>
+        <div class="about-list">
+          <div class="about-item">
+            <h4 class="about-title">Who We Are</h4>
+            <p class="about-text">CRETOMARK is an IT solutions provider specializing in software reselling, 
+              IT consulting, and security-driven IT services. Our expertise ensures that businesses operate efficiently with the right technology solutions tailored to their industry</p>
+          </div>
+          <div class="about-item">
+            <h4 class="about-title">Our Approach</h4>
+            <p class="about-text">We focus on practical IT solutions that align with business goals. 
+              By combining technical expertise with a consultative approach, we create strategies that enhance productivity, reduce risks, and optimize IT investments</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ OUR SERVICES (scroll-snap + synced indicator) ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="content">
+      <h2 class="title">Our services</h2>
+      <p class="text">Smart IT solutions designed around your business needs</p>
+    </div>
+    <div class="services__inner">
+      <!-- Left indicator -->
+      <aside class="services__aside">
+        <div class="aside__progress">
+          <span class="progress__track"></span>
+          <span class="progress__fill" id="progressFill"></span>
+        </div>
+  
+        <ol class="aside__list" id="asideList">
+          <li class="aside__item is-active" data-target="svc-1">
+            <span class="aside__num">01</span>
+            <span class="aside__title">Software Integration</span>
+          </li>
+          <li class="aside__item" data-target="svc-2">
+            <span class="aside__num">02</span>
+            <span class="aside__title">Reselling & IT Consulting</span>
+          </li>
+          <li class="aside__item" data-target="svc-3">
+            <span class="aside__num">03</span>
+            <span class="aside__title">Managed IT Services</span>
+          </li>
+          <button class="button">Talk To Expert
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+              <g clip-path="url(#clip0_52_968)">
+                <path d="M14.0244 8.49219L18.5322 13L14.0244 17.5078" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.78125 13H18.5312" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_52_968">
+                  <rect width="17" height="17" fill="white" transform="translate(0 13) rotate(-45)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </ol>
+      </aside>
+  
+      <!-- Right cards (one per viewport) -->
+      <div class="services__cards" id="cardsWrap">
+        <!-- Card 1 -->
+        <article class="service-card" id="svc-1">
+          <div class="card__head">
+            <p>Modern businesses rely on multiple digital tools, and seamless software integration is key to maintaining efficiency. We specialize in connecting systems and automating processes to eliminate bottlenecks and enhance performance</p>
+            <p>We work closely with businesses to understand their needs, ensuring custom-built integration solutions that optimize operations while maintaining compliance and security</p>
+          </div>
+          <div class="card__grid">
+            <div class="card__pill" style="width: 50%;">
+              <h4>API Development & Integration</h4>
+              <p>Create reliable, scalable connections between applications for seamless data flow and system interoperability</p>
+            </div>
+            <div class="card__pill" style="width: 50%;">
+              <h4>Software Automation</h4>
+              <p>Reduce manual tasks and streamline operations with automation solutions tailored to business workflows</p>
+            </div>
+          </div>
+        </article>
+  
+        <!-- Card 2 -->
+        <article class="service-card" id="svc-2">
+          <div class="card__head">
+            <p>Choosing and implementing the right software can be overwhelming. As an authorized software reseller, CRETOMARK provides businesses with licensed software solutions and the expertise to integrate them effectively</p>
+            <p>With a structured approach, we simplify the software selection process, assist with deployment, and train teams to maximize productivity</p>
+          </div>
+          <div class="card__grid">
+            <div class="card__pill">
+              <h4>License Management & Reselling</h4>
+              <p>Get official software licenses with expert support </p>
+            </div>
+            <div class="card__pill">
+              <h4>Vendor Selection Assistance</h4>
+              <p>Receive guidance in choosing the best IT tools based on business needs</p>
+            </div>
+            <div class="card__pill">
+              <h4>Implementation & Training</h4>
+              <p>Ensure smooth and effective software adoption</p>
+            </div>
+          </div>
+        </article>
+  
+        <!-- Card 3 -->
+        <article class="service-card" id="svc-3">
+          <div class="card__head">
+            <p>Reliable IT infrastructure is essential for business continuity and security. CRETOMARK provides comprehensive IT services designed to optimize, protect, and manage IT environments 
+              efficiently</p>
+            <p>By prioritizing security, stability, and efficiency, we ensure businesses operate without disruptions while safeguarding critical assets</p>
+          </div>
+          <div class="card__grid">
+            <div class="card__pill">
+              <h4>IT Infrastructure Management</h4>
+              <p>Maintain stable, scalable, and efficient IT systems to support business growth </p>
+            </div>
+            <div class="card__pill">
+              <h4>Cybersecurity Solutions</h4>
+              <p>Protect data with advanced security and monitoring</p>
+            </div>
+            <div class="card__pill">
+              <h4>Data Backup & Disaster Recovery</h4>
+              <p>Simplify software onboarding with expert support</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="service-mobile">
+      <p class="service-mobile-title">01 Software Integration</p>
+      <div class="service-mobile-item">
+        <p class="service-mobile-item-text">Modern businesses rely on multiple digital tools, and seamless software integration is key to maintaining efficiency. We specialize in connecting systems and automating processes to eliminate bottlenecks and enhance performance</p>
+        <p class="service-mobile-item-text">We work closely with businesses to understand their needs, ensuring custom-built integration solutions that optimize operations while maintaining compliance and security</p>
+        <div class="service-mobile-item-card">
+          <h5 class="card-mobile-title">API Development & Integration</h5>
+          <p class="card-mobile-text">Create reliable, scalable connections between applications for seamless data flow and system interoperability</p>
+        </div>
+        <div class="service-mobile-item-card">
+          <h5 class="card-mobile-title">Software Automation</h5>
+          <p class="card-mobile-text">Reduce manual tasks and streamline operations with automation solutions tailored to business workflows</p>
+        </div>
+        
+      </div>
+      
+      <p class="service-mobile-title">02 Software Reselling & IT Consulting</p>
+      <div class="service-mobile-item">
+        <p class="service-mobile-item-text">Choosing and implementing the right software can be overwhelming. As an authorized software reseller, CRETOMARK provides businesses with licensed software solutions and the expertise to integrate them effectively</p>
+        <p class="service-mobile-item-text">With a structured approach, we simplify the software selection process, assist with deployment, and train teams to maximize productivity</p>
+        <div class="service-mobile-item-card">
+          <h5 class="card-mobile-title">License Management & Reselling</h5>
+          <p class="card-mobile-text">Get official software licenses with expert support </p>
+        </div>
+        <div class="service-mobile-item-card">
+          <h5 class="card-mobile-title">Vendor Selection Assistance</h5>
+          <p class="card-mobile-text">Receive guidance in choosing the best IT tools based on business needs</p>
+        </div>
+        <div class="service-mobile-item-card">
+          <h5 class="card-mobile-title">Implementation & Training</h5>
+          <p class="card-mobile-text">Ensure smooth and effective software adoption</p>
+        </div>
+        
+      </div>
+      <p class="service-mobile-title">03 IT Services</p>
+      <div class="service-mobile-item">
+        <p class="service-mobile-item-text">Reliable IT infrastructure is essential for business continuity and security. CRETOMARK provides comprehensive IT services designed to optimize, protect, and manage IT environments 
+          efficiently</p>
+        <p class="service-mobile-item-text">By prioritizing security, stability, and efficiency, we ensure businesses operate without disruptions while safeguarding critical assets</p>
+        <div class="service-mobile-item-card">
+          <h5 class="card-mobile-title">IT Infrastructure Management</h5>
+          <p class="card-mobile-text">Maintain stable, scalable, and efficient IT systems to support business growth </p>
+        </div>
+        <div class="service-mobile-item-card">
+          <h5 class="card-mobile-title">Cybersecurity Solutions</h5>
+          <p class="card-mobile-text">Protect data with advanced security and monitoring</p>
+        </div>
+        <div class="service-mobile-item-card">
+          <h5 class="card-mobile-title">Data Backup & Disaster Recovery</h5>
+          <p class="card-mobile-text">Simplify software onboarding with expert support</p>
+        </div>
+        
+      </div>
+
+      <button class="button">
+        Talk To Expert 
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+          <g clip-path="url(#clip0_52_614)">
+            <path d="M14.5039 8.49219L19.0117 13L14.5039 17.5078" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.26074 13H19.0107" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_52_614">
+              <rect width="17" height="17" fill="white" transform="translate(0.479492 13) rotate(-45)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+  <section class="how">
+    <div class="how-img">
+      <img src="./src/images/how-bg.png" height="874" alt="" class="how-bg">
+    </div>
+    
+    <div class="container">
+      <div class="content">
+        <h2 class="title">How We Work</h2>
+        <p class="text">Technology plays a critical role in business success, but choosing and implementing the right solutions can be complex. At CRETOMARK, we follow a step-by-step approach to ensure seamless IT integration, software selection, and security enhancement</p>
+      </div>
+
+       <!-- sticky-сцена -->
+       <div class="how__stage" id="howStage">
+        <div class="how__rail"></div>
+  
+        <!-- КАРТКИ (позиція по осі X/Y) -->
+        <article class="how-card" data-step="0" style="--x:12%; --y:22%">
+          <p>Understanding Business Needs – Every project begins with a thorough assessment of challenges and goals</p>
+        </article>
+  
+        <article class="how-card" data-step="1" style="--x:36%; --y:85%">
+          
+          <p>Tailored Recommendations – We provide IT strategies that align with specific business requirements</p>
+        </article>
+  
+        <article class="how-card" data-step="2" style="--x:62%; --y:26%">
+          <p>Implementation & Optimization – We ensure smooth software deployment, system integration, and security enhancements</p>
+        </article>
+  
+        <article class="how-card" data-step="3" style="--x:86%; --y:85%">
+          <p>Ongoing Support & Maintenance – Continuous monitoring and updates for lasting success</p>
+        </article>
+  
+        <!-- Точки-індикатори -->
+        <div class="how__dots" id="howDots" aria-hidden="true">
+          <span class="dot" data-step="0" style="--x:12%"></span>
+          <span class="dot" data-step="1" style="--x:36%"></span>
+          <span class="dot" data-step="2" style="--x:62%"></span>
+          <span class="dot" data-step="3" style="--x:86%"></span>
+        </div>
+      </div>
+  
+      <!-- СКРОЛ-ТРИГЕРИ (невидимі блоки, один на крок) -->
+      <div class="how__triggers">
+        <div class="how-trigger" data-step="0"></div>
+        <div class="how-trigger" data-step="1"></div>
+        <div class="how-trigger" data-step="2"></div>
+        <div class="how-trigger" data-step="3"></div>
+      </div>
+
+    </div>
+  </section>
+
+    <section id="faq" class="faq">
+      <img src="./src/images/Ellipse4.png" class="faq-ellipse" alt="">
+      <div class="container">
+        <div class="content">
+          <h2 class="title">Faq</h2>
+          <p class="text">We understand that businesses often have specific concerns when it comes 
+            to IT services and software solutions. Here are some of the most common questions we receive</p>
+        </div>
+
+        <div class="faq-akardeon">
+
+          <div class="accordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4>What types of businesses do you work with?</h4>
+                <span class="accordion-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9L12 15L18 9" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="accordion-content">
+                <p>We primarily support small to medium-sized enterprises (SMEs) and startups, helping them integrate software, optimize IT infrastructure, and strengthen cybersecurity. Our services are tailored to businesses in various industries, including retail, healthcare, technology, and professional services.</p>
+              </div>
+            </div>
+          
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4>Do you offer software recommendations, or only resell licenses?</h4>
+                <span class="accordion-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9L12 15L18 9" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="accordion-content">
+                <p>We do both. Our IT consultants work with businesses to identify the best software solutions based on operational needs and goals. We then provide licensed software with seamless integration and expert support.</p>
+              </div>
+            </div>
+          
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4>How do you ensure data security when integrating software?</h4>
+                <span class="accordion-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9L12 15L18 9" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="accordion-content">
+                <p>Security is a top priority. Our API development and automation solutions follow industry best practices to ensure data protection. Additionally, our cybersecurity services help businesses safeguard sensitive information against potential threats.</p>
+              </div>
+            </div>
+          
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4>What level of IT support do you provide after implementation?</h4>
+                <span class="accordion-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9L12 15L18 9" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="accordion-content">
+                <p>We offer ongoing IT support, including system monitoring, troubleshooting, updates, and optimization. Our goal is to ensure that your IT infrastructure and software remain efficient and secure in the long run.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <h4>How do I know if my business needs IT consulting?</h4>
+                <span class="accordion-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 9L12 15L18 9" stroke="#5E5E5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="accordion-content">
+                <p>If you're struggling with outdated software, inefficient workflows, or security concerns, IT consulting can help. Our team assesses your IT landscape, identifies areas for improvement, and recommends custom solutions that align with your business objectives.</p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-block">
+
+          <img src="./src/images/popup-bg.png" alt="" class="popup-bg-up">
+        <img src="./src/images/popup-bg1.png" alt="" class="popup-bg-down">
+        <div class="popup-inner">
+          <div class="popup-context">
+            <h3>Let’s Talk About Your IT Needs </h3>
+            <p>
+              Whether you need software solutions, IT consulting, or cybersecurity services, CRETOMARK is here to help. Contact us today to discuss your technology requirements and explore customized IT solutions designed for your business.
+            </p>
+          </div>
+
+          <form class="popup-form" id="joinForm">
+            <input type="text" id="name" placeholder="Full Name" required />
+
+            <input type="email" id="email" placeholder="E-mail" required />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              required
+            ></textarea>
+            <div class="popup-wrapper">
+              <button type="popup" class="popup-btn button">Send A Message
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <g clip-path="url(#clip0_52_1078)">
+                    <path d="M15.0039 8.49219L19.5117 13L15.0039 17.5078" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.76074 13H19.5107" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_52_1078">
+                      <rect width="17" height="17" fill="white" transform="translate(0.979492 13) rotate(-45)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee">
+      <div class="marquee-track">
+        <span class="marquee-text">
+          Smart. Secure. Scalable / Technology That Works / Your Partner in IT Success / Efficient. Reliable. Future-Ready /
+        </span>
+        <span class="marquee-text" aria-hidden="true">
+          Smart. Secure. Scalable / Technology That Works / Your Partner in IT Success / Efficient. Reliable. Future-Ready /
+        </span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-list">
+          <div class="footer-item">
+            <img src="./src/images/footer-logo.svg" width="479" height="229" alt="" class="footer-logo">
+          </div>
+          <div class="footer-item">
+            <div class="footer-menu">
+              <a href="#home" class="header-link footer-link">Home</a>
+              <a href="#about" class="header-link footer-link">About</a>
+              <a href="#services" class="header-link footer-link">Services</a>
+              <a href="#faq" class="header-link footer-link" style="font-family: Inter;">Faq</a>
+              <a href="#contact" class="header-link footer-link">Contact</a>
+            </div>
+            <div class="footer-adress">
+              <p class="footer-text">Address:</p>
+              <p class="footer-ad">1092 Budapest, Ráday utca 33/A 3. em. 1. ajtó</p>
+            </div>
+            <div class="footer-mail">
+              <p class="footer-text">Email:</p>
+              <p class="footer-ad">info@cretomark.com</p>
+            </div>
+          </div>
+          <div class="footer-item">
+            <div class="footer-icon">
+              <a href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 20V4M12 4L6 10M12 4L18 10" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></a>
+            </div>
+            
+          </div>
+        </div>
+        <a href="./src/politic.html" class="copyright">© 2025 Cretomark KFT. All rights reserved</a>
+      </div>
+    </footer>
+    
+
+    <script type="module" src="./src/main.js"></script>
+    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  </body>
+</html>

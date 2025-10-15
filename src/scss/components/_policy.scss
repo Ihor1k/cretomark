@@ -1,0 +1,66 @@
+.policy {
+    margin-top: 150px;
+}
+
+.policy-title {
+    color: var(--Color-text-hover, #F0F0F0);
+font-family: Urbanist;
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: 90%;
+letter-spacing: -1.92px;
+}
+
+// .policy-subtitle {
+//     color: var(--neutral-black, #000);
+
+//     /* body medium */
+//     font-family: "Albert Sans";
+//     font-size: 20px;
+//     font-style: normal;
+//     font-weight: 400;
+//     line-height: 130%; /* 26px */
+//     margin: 80px 0 24px 0;
+// }
+
+// .policy-text {
+//     color: var(--neutral-black, #000);
+
+// /* body medium */
+// font-family: "Albert Sans";
+// font-size: 20px;
+// font-style: normal;
+// font-weight: 400;
+// line-height: 130%; /* 26px */
+// max-width: 866px;
+// width: 100%;
+// opacity: 0.7;
+// }
+
+.policy-inner {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.policy-num {
+    color: var(--Color-text-default, #B1B1B1);
+font-family: Urbanist;
+font-size: 26px;
+font-style: normal;
+font-weight: 600;
+line-height: 110%;
+}
+
+
+
+.policy-inner-text {
+    color: var(--Color-text-default, #B1B1B1);
+font-family: Urbanist;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 26px */
+}

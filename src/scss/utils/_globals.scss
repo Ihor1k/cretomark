@@ -1,0 +1,125 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-surface, #000A09);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+body.noscroll {
+    overflow: hidden;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+    margin-bottom: 80px;
+    @media screen and (max-width: 480px) {
+        // flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.title {
+    color: var(--Color-text-hover, #F0F0F0);
+text-align: center;
+font-family: Urbanist;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 100%; /* 40px */
+@media screen and (max-width: 480px) {
+    font-size: 28px;
+}
+}
+
+.text {
+    color: var(--Color-text-default, #B1B1B1);
+text-align: center;
+font-family: Urbanist;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 33.6px */
+max-width: 874px;
+width: 100%;
+@media screen and (max-width: 480px) {
+    font-size: 20px;   
+}
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    // margin-top: 44px;
+
+    color: var(--color-surface, #000A09);
+font-family: Urbanist;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 125% */
+text-transform: uppercase;
+    // border: 1px solid #000;
+
+    // width: 100%;
+    border-radius: 100px;
+background: var(--color-brand, #4FDB5C);
+    border: none;
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: all 600ms linear;
+    // border-radius: 100px;
+    @media screen and (max-width: 480px) {
+        width: 100%;   
+    }
+  }
+
+  .button:hover {
+    color: #000A09;
+    background: var(--Primary_brand, #F0F0F0);
+    // border: 1px solid #F2A81A;
+  }
+
+  .button svg path {
+    transition: all 600ms linear;
+  }
+
+  .button:hover svg path {
+    stroke: #000A09;
+  }
+
+  .button:active {
+    background: #4FDB5C;
+    color: #000A09;
+  }
+
+// .sticky-section {
+//     position: sticky !important;
+//     top: -50%;
+//     // height: 150vh;
+//     @media screen and (max-width: 480px) {
+//         position: unset !important;
+//     }
+//   }
+
+// br {
+//     @media screen and (max-width: 480px) {
+//         display: none;   
+//     }
+// }

@@ -1,0 +1,257 @@
+  .services{
+    margin-top: clamp(120px, 10vw, 240px);
+  }
+  .services__inner{
+    display: flex;
+    justify-content: space-between;
+
+    gap: 100px;
+    position: relative;
+    @media screen and (max-width: 480px) {
+        
+        display: none;
+    }
+  }
+  
+  /* Left aside */
+  .services__aside{
+    width: 50%;
+    position: sticky;
+    top: 140px;
+    align-self: start;
+    height: calc(100vh - 160px);
+    display: flex;
+    gap: 24px;
+    @media screen and (max-width: 480px) {
+        position: relative;
+        width: 100%;
+    }
+  }
+  
+  .aside__progress{
+    position: relative;
+    width: 2px;
+    height: 304px;
+    margin-left: 16px;
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
+  }
+  .progress__track{
+    position:absolute; inset:0;
+    background: rgba(255,255,255,0.07);
+    border-radius: 2px;
+  }
+  .progress__fill{
+    position:absolute; left:0; top:0; width:2px; height:0%;
+    background: var(--accent);
+    transition: height .35s ease;
+    border-radius: 2px;
+  }
+  
+  .aside__list{
+    // width: 50%;
+    display:flex; flex-direction:column; gap:100px;
+  }
+  .aside__item{
+    display: flex;
+    align-items:center; 
+    gap:12px;
+    cursor:pointer;
+    opacity:.6; transition:opacity .2s ease, color .2s ease, transform .2s ease;
+  }
+  .aside__item:hover{ opacity:.85; }
+  .aside__num{ color: var(--Color-text-default, #B1B1B1);
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 33.6px */ }
+  .aside__title{ color: var(--Color-text-default, #B1B1B1);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase; 
+    max-width: 185px;
+    width: 100%;
+}
+  .aside__item.is-active{
+    opacity:1; color:#4FDB5C;
+  }
+  .aside__item.is-active .aside__num{ color: #4FDB5C; }
+  
+  .aside__item.is-active .aside__title {
+    color: #4FDB5C;
+  }
+
+  /* Right column cards */
+  .services__cards{
+    /* робимо «перегортання» карток рівно на екран */
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 90px;  
+  }
+  .service-card{
+    opacity: 0;
+  pointer-events: none;          /* щоб не було випадкових кліків по прихованих */
+  transition: opacity 600ms ease;
+    scroll-snap-align: start;
+    // min-height: 50vh;    
+    scroll-snap-align: center;           /* одна картка = один екран */
+    display:flex; flex-direction:column;
+    justify-content: center;
+    gap:15px;
+    padding: 24px;
+    border-radius: 16px;
+border: 1px solid var(--color-card-border, #262626);
+background: var(--color-card-default, #141414);
+  }
+
+  .service-card.is-active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+//   .services__cards .service-card:first-child{
+//     opacity: 1;
+//     pointer-events: auto;
+//   }
+  .service-card + .service-card{ margin-top: 80px; }
+  
+  .card__head p{ 
+    color: var(--Color-text-default, #B1B1B1);
+font-family: Urbanist;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 25.2px */
+max-width: 840px;
+width: 100%;
+margin-bottom: 24px;
+   }
+  
+  .card__grid{
+   display: flex;
+   justify-content: space-between;
+   align-items: stretch;
+   gap: 25px;
+  }
+  .card__pill{
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 18px;
+    padding: 24px;
+    width: 33%;
+  }
+  .card__pill h4{
+    color: var(--color-brand, #4FDB5C);
+font-family: Urbanist;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 125% */
+text-transform: uppercase;
+margin-bottom: 24px;
+  }
+  .card__pill p{
+    color: var(--Color-text-hover, #F0F0F0);
+font-family: Urbanist;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 25.2px */
+  }
+  
+  /* Mobile */
+  @media (max-width: 920px){
+    .services__inner{ grid-template-columns: 1fr; }
+    .services__aside{
+      position: static; height:auto;
+      grid-template-rows: auto auto;
+    }
+    .services__cards .service-card{ min-height: 92vh; }
+    .card__grid{ grid-template-columns: 1fr; }
+  }
+  
+
+
+
+.service-mobile {
+    display: none;
+    @media screen and (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.service-mobile-title {
+    color: var(--color-brand, #4FDB5C);
+// text-align: center;
+width: 100%;
+font-family: Urbanist;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+text-transform: uppercase;
+margin-bottom: 16px;
+padding-bottom: 8px;
+}
+
+.service-mobile-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+// transform: rotate(-90deg);
+background: linear-gradient(90deg, #4FDB5C 0%, #595959 33.65%);
+}
+
+.service-mobile-item {
+    padding: 24px;
+    border-radius: 16px;
+border: 1px solid var(--color-card-hover, #1C1C1C);
+background: var(--color-card-default, #141414);
+margin-bottom: 24px;
+}
+
+.service-mobile-item-text {
+    color: var(--Color-text-hover, #F0F0F0);
+font-family: Urbanist;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+margin-bottom: 16px;
+}
+
+.service-mobile-item-card {
+    border-radius: 14px;
+border: 1px solid var(--color-card-hover, #1C1C1C);
+background: var(--color-card-hover, #1C1C1C);
+padding: 16px;
+margin-bottom: 16px;
+}
+
+.card-mobile-title {
+    color: var(--color-brand, #4FDB5C);
+// text-align: center;
+font-family: Urbanist;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 142.857% */
+text-transform: uppercase;
+margin-bottom: 16px;
+}
+
+.card-mobile-text {
+    color: var(--Color-text-hover, #F0F0F0);
+font-family: Urbanist;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+}

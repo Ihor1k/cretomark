@@ -1,0 +1,54 @@
+.marquee {
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+    margin-top: clamp(100px, 10vw, 210px);
+    // position: relative;
+    /* опціонально — невелика тінь або фон */
+  }
+  
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scrollText 30s linear infinite;
+    
+  }
+  
+  .marquee-text {
+    display: inline-block;
+    padding-right: 4rem; /* відстань між повтореннями */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-accent, #172F27);
+    font-family: "Urbanist", sans-serif;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 120px */
+    letter-spacing: -0.25px;
+    color: transparent; /* щоб видно було лише обведення */
+    white-space: nowrap;
+  }
+  
+  /* 🔁 плавна безшовна анімація */
+  @keyframes scrollText {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  
+  /* 📱 адаптив */
+  @media (max-width: 480px) {
+    .marquee-text {
+      font-size: 90px;
+      padding-right: 2rem;
+    }
+  
+    .marquee-track {
+      animation: scrollText 20s linear infinite;
+    }
+  }
+  

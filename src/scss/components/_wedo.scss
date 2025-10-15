@@ -1,0 +1,64 @@
+.wedo {
+    margin-top: 260px;
+}
+
+.wedo-list {
+    display: flex;
+    align-items: stretch;
+    gap: 24px;
+    justify-content: space-between;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.wedo-item {
+    border-radius: 16px;
+    border: 1px solid var(--color-card-border, #262626);
+    background: var(--color-card-default, #141414);
+
+    /* Background Blur */
+    backdrop-filter: blur(6.5px);
+    padding: 24px;
+    display: flex;  
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    transition: all 600ms ease-in-out;
+    @media screen and (max-width: 480px) {
+        gap: 24px;
+        border: 1px solid var(--color-border-hover, #4FDB5C);
+        background: var(--color-card-hover, #1C1C1C);
+    }
+}
+
+.wedo-item:hover {
+    border: 1px solid var(--color-border-hover, #4FDB5C);
+    background: var(--color-card-hover, #1C1C1C);
+}
+
+.wedo-item svg path {
+    transition: all 600ms ease-in-out;
+    @media screen and (max-width: 480px) {
+        stroke: #4FDB5C;
+    }
+}
+
+.wedo-item:hover svg path {
+    stroke: #4FDB5C;
+}
+
+.wedo-text {
+    color: var(--Color-text-hover, #F0F0F0);
+font-family: Urbanist;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 25.2px */
+max-width: 384px;
+width: 100%;
+}
+
+
+

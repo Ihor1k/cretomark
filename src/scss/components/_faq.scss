@@ -1,0 +1,115 @@
+.faq {
+    margin-top: clamp(120px, 10vw, 240px);
+    position: relative;
+    // background: var(--color-surface, #000A09);
+}
+
+.faq-ellipse {
+    position: absolute;
+    top: -450px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    max-height: 2500px;
+}
+
+.faq-akardeon {
+    // flex: 1 1 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 480px) {
+        width: 100%;  
+        margin-top: 100px;
+    }   
+}
+
+.accordion {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 10vw, 24px);
+    @media screen and (max-width: 480px) {
+      width: 100%;   
+    }
+  }
+  
+  .accordion-item {
+    border-radius: 12px;
+    padding: 24px;
+border: 1px solid var(--color-card-border, #262626);
+background: rgba(20, 20, 20, 0.90);
+    overflow: hidden;
+    transition: all 600ms ease-in-out;
+  }
+
+  .accordion-item:hover {
+    border: 1px solid var(--color-border-hover, #4FDB5C);
+
+    background: var(--color-card-hover, #1C1C1C);
+  }
+
+  .accordion-item.active {
+    border: 1px solid var(--color-border-hover, #4FDB5C);
+
+    background: var(--color-card-hover, #1C1C1C);
+  }
+  
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .accordion-header h4 {
+    color: var(--Color-text-default, #B1B1B1);
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 33.6px */
+    @media screen and (max-width: 480px) {
+      font-size: 16px; 
+      color: #F0F0F0;  
+    }
+  }
+  
+  .accordion-icon {
+    transition: transform 600ms ease;
+    display: inline-flex;
+  }
+  
+  .accordion-item.active .accordion-icon {
+    transform: rotate(180deg);
+  }
+  
+  .accordion-content {
+    color: var(--Color-text-hover, #F0F0F0);
+font-family: Urbanist;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 600ms ease, opacity 600ms ease, margin-top 600ms ease;
+    margin-top: 0;
+    @media screen and (max-width: 480px) {
+      font-size: 14px;   
+    }
+  }
+
+  .accordion-content p {
+    @media screen and (max-width: 480px) {
+      opacity: .7;   
+    }
+  }
+  
+  /* Відкритий стан */
+  .accordion-item.active .accordion-content {
+    max-height: 500px; /* достатньо для вашого тексту */
+    opacity: 1;
+    margin-top: 24px;
+  }

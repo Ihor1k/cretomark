@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cretomark</title>
+    <link rel="stylesheet" href="./scss/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="menu-overlay"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo">
+            <a href="/"
+              ><img
+                src="./images/logo.png"
+                width="52"
+                height="52"
+                alt="Logo"
+            /></a>
+          </div>
+          <div class="header-logo-mobile">
+            <a href="/"
+              ><img
+                src="./images/header-logo-mobile.png"
+                width="24"
+                height="24"
+                alt="Logo"
+            /></a>
+          </div>
+
+          <div class="burger">
+            <img src="./images/burger.svg" alt="" />
+          </div>
+
+          <div class="header-menu">
+            <div class="burger-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  fill="#5C5A5B"
+                />
+              </svg>
+            </div>
+            <a href="/index.html#home" class="header-link">Home</a>
+            <a href="/index.html#about" class="header-link">About</a>
+            <a href="/index.html#services" class="header-link">Services</a>
+            <a href="/index.html#faq" class="header-link" style="font-family: Inter;">Faq</a>
+            <a href="/index.html#contact" class="header-link">Contact</a>
+          </div>
+
+          <div class="header-buttons mobile-visible">
+            <button class="header-button"><span>Contact Us</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                <g clip-path="url(#clip0_52_915)">
+                  <path d="M14.9824 8.49219L19.4902 13L14.9824 17.5078" stroke="#4FDB5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6.73926 13H19.4892" stroke="#4FDB5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_52_915">
+                    <rect width="17" height="17" fill="white" transform="translate(0.958008 13) rotate(-45)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="popup-overlay" id="popup">
+      <div class="popup">
+        <img src="./images/popup-bg.png" alt="" class="popup-bg-up">
+        <img src="./images/popup-bg1.png" alt="" class="popup-bg-down">
+        <div class="popup-inner">
+          <div class="popup-context">
+            <h3>Let’s Talk About Your IT Needs </h3>
+            <p>
+              Whether you need software solutions, IT consulting, or cybersecurity services, CRETOMARK is here to help. Contact us today to discuss your technology requirements and explore customized IT solutions designed for your business.
+            </p>
+          </div>
+
+          <form class="popup-form" id="joinForm">
+            <input type="text" id="name" placeholder="Full Name" required />
+
+            <input type="email" id="email" placeholder="E-mail" required />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              required
+            ></textarea>
+            <div class="popup-wrapper">
+              <button type="popup" class="popup-btn button">Send A Message
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                  <g clip-path="url(#clip0_52_1078)">
+                    <path d="M15.0039 8.49219L19.5117 13L15.0039 17.5078" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6.76074 13H19.5107" stroke="#000A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_52_1078">
+                      <rect width="17" height="17" fill="white" transform="translate(0.979492 13) rotate(-45)"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <span class="close-popup">&times;</span>
+      </div>
+    </div>
+
+    <section class="policy">
+        <div class="container">
+            <h3 class="policy-title"><span class="green">Privacy</span> Policy</h3>
+            <div class="policy-inner">
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="green">1.</span> Introduction </h6>
+                    <p class="policy-inner-text">This Privacy Policy explains how Cretomark KFT (hereinafter referred to as “we,” “our,” “us,” or the “Company”), operating from the website https://cretomark.com/, protects the personal data and privacy of individuals who use our services (hereinafter referred to as the “Services”).
+<br><br>
+                      Cretomark KFT is committed to safeguarding your privacy and ensuring your personal data is handled in a transparent manner, in compliance with the European Regulation 2016/679 (GDPR) and the applicable Hungarian data protection legislation. The type of personal data we collect and process may vary depending on the Services you request or agree to.
+                      <br><br>
+                      Effective as of 27.09.2025 , Cretomark KFT has updated its Privacy Policy (hereinafter referred to as the “Policy”).</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="green">2.</span>What We Collect</h6>
+                    <p class="policy-inner-text">Our Personal Data Protection Policy governs the collection, storage, and use of your data. <br><br>
+
+                      Cretomark KFT acts as the Controller of personal data you provide to us. We only collect basic personal information that allows us to deliver our Services effectively.
+                      <br><br>
+                      Subscriber’s personal data (such as name, telephone number, and email address, hereinafter “Your Information”) may be processed by Cretomark KFT, its employees, authorized agents, and where necessary, selected partners or subcontractors. Data is collected when you interact with us through forms on our website: https://cretomark.com/.</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="green">3.</span> Why We Collect It </h6>
+                    <p class="policy-inner-text">We use your personal data to provide the following Services:
+                      Contacting you – collecting name, email, and phone number for communication purposes. <br><br>Communicating with you – collecting email addresses to send information, updates, or responses. <br><br>Legal basis: Data Subject consent, contract conclusion, and contract performance..</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="green">4.</span> Who Receives Your Data </h6>
+                    <p class="policy-inner-text">Your personal data is accessed only by our staff and authorized employees, all of whom are subject to confidentiality obligations. In certain cases, we may share information with trusted service providers who assist us with IT, hosting, or communication support, always under agreements that ensure compliance with data protection laws. Where required by law, we may also disclose data to regulatory authorities. We do not sell or rent your personal information, and any sharing is limited to what is necessary to provide our Services.</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="green">5.</span> International Data Transfers </h6>
+                    <p class="policy-inner-text">Your personal data may sometimes be transferred outside the European Economic Area, for example when using cloud services or communication tools based in third countries. In such cases, we apply safeguards to ensure compliance with GDPR, such as Standard Contractual Clauses or transfers to countries recognized as providing adequate protection. This ensures that your information remains secure and protected even when processed abroad..</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="green">6.</span>Data Retention  </h6>
+                    <p class="policy-inner-text">We keep your personal data only for as long as it is necessary to fulfill the purposes described in this Policy or as required by law. Specifically:
+<br><br>
+&#8226; Contact details and communications are kept for the duration of our relationship with you and for a limited period thereafter, in case follow-up is necessary. <br>
+&#8226; Contract-related information may be retained for longer periods in accordance with accounting, tax, or regulatory obligations. <br>
+&#8226; Backup copies may be stored securely for disaster recovery purposes, but access to such data is strictly limited.
+                      <br> <br>
+                      If personal data is kept for research, statistical analysis, or archiving purposes, it will be anonymized wherever possible. When data is no longer needed, it will be securely deleted or destroyed..</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="green">7.</span> Your Rights </h6>
+                    <p class="policy-inner-text">
+                      You have the right to:
+<br><br>
+&#8226; Access your personal data (obtain a copy and check its lawful processing). <br>
+&#8226; Request corrections to inaccurate or incomplete data. <br>
+&#8226; Request deletion of your data (“right to be forgotten”) where applicable. <br>
+&#8226; Object to processing based on legitimate interests, unless overriding grounds exist. <br>
+&#8226; Withdraw consent at any time, without affecting prior lawful processing. <br> <br>
+                      
+                      If you have concerns about how we handle your data, please contact our Data Protection Officer (DPO) at: info@cretomark.com..
+                    </p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="green">8.</span> Right to Lodge a Complaint </h6>
+                    <p class="policy-inner-text">If after contacting us you believe your data has not been handled lawfully, you have the right to file a complaint with the Hungarian Data Protection Authority:
+<br><br>
+                      The National Authority for Data Protection and Freedom of Information <br>1055 Budapest, Falk Miksa utca 9-11 <br>Email: ugyfelszolgalat@naih.hu.</p>
+                </div>
+                
+                <div class="policy-item">
+                    <h6 class="policy-num"><span class="green">9.</span> Changes to This Policy </h6>
+                    <p class="policy-inner-text">We may update this Privacy Policy from time to time. Significant changes will be communicated through our website, and the revision date will be updated. We encourage you to review this Policy periodically to stay informed about how we manage and protect your personal data.</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="marquee">
+      <div class="marquee-track">
+        <span class="marquee-text">
+          Smart. Secure. Scalable / Technology That Works / Your Partner in IT Success / Efficient. Reliable. Future-Ready /
+        </span>
+        <span class="marquee-text" aria-hidden="true">
+          Smart. Secure. Scalable / Technology That Works / Your Partner in IT Success / Efficient. Reliable. Future-Ready /
+        </span>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-list">
+          <div class="footer-item">
+            <img src="./images/footer-logo.svg" width="479" height="229" alt="" class="footer-logo">
+          </div>
+          <div class="footer-item">
+            <div class="footer-menu">
+              <a href="/index.html#home" class="header-link footer-link">Home</a>
+              <a href="/index.html#about" class="header-link footer-link">About</a>
+              <a href="/index.html#services" class="header-link footer-link">Services</a>
+              <a href="/index.html#faq" class="header-link footer-link" style="font-family: Inter;">Faq</a>
+              <a href="/index.html#contact" class="header-link footer-link">Contact</a>
+            </div>
+            <div class="footer-adress">
+              <p class="footer-text">Address:</p>
+              <p class="footer-ad">1092 Budapest, Ráday utca 33/A 3. em. 1. ajtó</p>
+            </div>
+            <div class="footer-mail">
+              <p class="footer-text">Email:</p>
+              <p class="footer-ad">info@cretomark.com</p>
+            </div>
+          </div>
+          <div class="footer-item">
+            <div class="footer-icon">
+              <a href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 20V4M12 4L6 10M12 4L18 10" stroke="#B1B1B1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></a>
+            </div>
+            
+          </div>
+        </div>
+        <a href="./politic.html" class="copyright">© 2025 Cretomark KFT. All rights reserved</a>
+      </div>
+    </footer>
+  
+    <script type="module" src="./main.js"></script>
+    <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
