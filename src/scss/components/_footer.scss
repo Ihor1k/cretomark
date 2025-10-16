@@ -24,9 +24,18 @@
     }
 }
 
-.footer-item img {
+.footer-logo {
     @media screen and (max-width: 480px) {
-        width: 100%;   
+        display: none;
+    }
+}
+
+.footer-logo-mobile {
+    display: none;
+    @media screen and (max-width: 480px) {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
 
